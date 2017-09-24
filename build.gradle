@@ -1,4 +1,4 @@
-buildscript {
+abuildscript {
 	ext {
 		springBootVersion = '1.5.7.RELEASE'
 	}
