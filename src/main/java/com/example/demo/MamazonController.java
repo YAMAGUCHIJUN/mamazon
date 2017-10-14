@@ -18,17 +18,14 @@ public class MamazonController {
     AccountService service;
 
     @RequestMapping(value="/",method=RequestMethod.GET)
-    public List<Account> index(Model model){
+    public void index(){
 
         // レコードを取得してページのmodelにセットしておく
         Account account = service.findById(1l);
         model.addAttribute("name", account.getName());
 
         service.findAll().stream().map(a->a.getName()).forEach(System.out::println);
-        return service.findAll();
     }
-
-
 //    public String mainpage(Model model) {
 //        return "hoge";
 //    }
