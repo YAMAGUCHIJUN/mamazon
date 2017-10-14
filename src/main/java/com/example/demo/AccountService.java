@@ -16,5 +16,10 @@ public class AccountService {
 
     public List<Account> findAll(){
         return repository.findAll(new Sort(Sort.Direction.ASC,"id"));
+
     };
+
+    public Account findById(Long id) {
+        return repository.findOne(id);
+    }
 }
