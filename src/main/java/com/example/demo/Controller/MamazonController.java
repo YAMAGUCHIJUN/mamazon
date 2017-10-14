@@ -1,5 +1,7 @@
-package com.example.demo;
+package com.example.demo.Controller;
 
+import com.example.demo.entity.Account;
+import com.example.demo.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
