@@ -10,15 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/hoge")
+@RequestMapping("/index")
 public class MamazonController {
     @Autowired
     AccountService service;
 
     @RequestMapping(value="/",method=RequestMethod.GET)
-    public List<Account> index(){
+    public void index(){
         service.findAll().stream().map(a->a.getName()).forEach(System.out::println);
-        return service.findAll();
     }
 //    public String mainpage(Model model) {
 //        return "hoge";
