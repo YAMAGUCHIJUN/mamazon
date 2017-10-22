@@ -1,6 +1,9 @@
 package com.example.demo.entity;
 
+import java.sql.Timestamp;
+
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -9,9 +12,11 @@ import javax.persistence.Table;
 
 import lombok.Data;
 
-@Data
+@Entity
 @Table(name = "item_stocks")
-public class ItemStocks {
+@Data
+public class ItemStock {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "item_id")
@@ -28,8 +33,8 @@ public class ItemStocks {
 	private Long stockCount;
 
 	@Column(name="created_at")
-	private java.sql.Timestamp createdAt;
+	private Timestamp createdAt;
 
 	@Column(name="updated_at")
-	private java.sql.Timestamp updatedAt;
+	private Timestamp updatedAt;
 }

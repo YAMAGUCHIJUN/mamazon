@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.dao.AccountRepository;
+import com.example.demo.dao.AccountDAO;
 import com.example.demo.entity.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -14,7 +14,7 @@ import java.util.List;
 public class AccountService {
 
     @Autowired
-    AccountRepository repository;
+    AccountDAO repository;
 
     public List<Account> findAll(){
         return repository.findAll(new Sort(Sort.Direction.ASC,"id"));
