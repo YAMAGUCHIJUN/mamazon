@@ -1,58 +1,30 @@
-package com.my.db;
+package com.example.demo.entity;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Table(name = "item_price")
 public class ItemPrice {
-  private Long id;
-  private Long item_id;
-  private Long price;
-  private Long include_tax;
-  private java.sql.Timestamp created_at;
-  private java.sql.Timestamp updated_at;
-
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public Long getItem_id() {
-    return item_id;
-  }
-
-  public void setItem_id(Long item_id) {
-    this.item_id = item_id;
-  }
-
-  public Long getPrice() {
-    return price;
-  }
-
-  public void setPrice(Long price) {
-    this.price = price;
-  }
-
-  public Long getInclude_tax() {
-    return include_tax;
-  }
-
-  public void setInclude_tax(Long include_tax) {
-    this.include_tax = include_tax;
-  }
-
-  public java.sql.Timestamp getCreated_at() {
-    return created_at;
-  }
-
-  public void setCreated_at(java.sql.Timestamp created_at) {
-    this.created_at = created_at;
-  }
-
-  public java.sql.Timestamp getUpdated_at() {
-    return updated_at;
-  }
-
-  public void setUpdated_at(java.sql.Timestamp updated_at) {
-    this.updated_at = updated_at;
-  }
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	@SequenceGenerator(name = "item_price_id_seq", sequenceName = "account_id_seq", allocationSize = 1)
+	private Long id;
+	@Column(name="item_id")
+	private Long itemId;
+	@Column(name="price")
+	private Long price;
+	@Column(name="include_tax")
+	private Long includeTax;
+	@Column(name="created_at")
+	private java.sql.Timestamp createdAt;
+	@Column(name="updated_at")
+	private java.sql.Timestamp updatedAt;
 }
