@@ -32,10 +32,19 @@ public class Account implements Serializable{
     private String phoneNumber;
 
     @Column(name="zip_code")
-    private String zip_code;
+    private String zipCode;
 
     @Column(name="address")
     private String address;
+
+    @Column(name="mail")
+    private String mail;
+
+    @Column(name="created_at")
+    private String createdAt;
+
+    @Column(name="updated_at")
+    private String updatedAt;
 
     public long getId() {
         return id;
@@ -53,8 +62,8 @@ public class Account implements Serializable{
         return phoneNumber;
     }
 
-    public String getZip_code() {
-        return zip_code;
+    public String getZipCode() {
+        return zipCode;
     }
 
     public String getAddress() {
@@ -66,21 +75,12 @@ public class Account implements Serializable{
     }
 
     public String getCreated_at() {
-        return created_at;
+        return createdAt;
     }
 
     public String getUpdated_at() {
-        return updated_at;
+        return updatedAt;
     }
-
-    @Column(name="mail")
-    private String mail;
-
-    @Column(name="created_at")
-    private String created_at;
-
-    @Column(name="updated_at")
-    private String updated_at;
 
     public void setId(long id) {
         this.id = id;
@@ -98,8 +98,8 @@ public class Account implements Serializable{
         this.phoneNumber = phoneNumber;
     }
 
-    public void setZip_code(String zip_code) {
-        this.zip_code = zip_code;
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 
     public void setAddress(String address) {
@@ -110,11 +110,11 @@ public class Account implements Serializable{
         this.mail = mail;
     }
 
-    public void setCreated_at(String created_at) {
-        this.created_at = created_at;
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public void setUpdated_at(String updated_at) {
-        this.updated_at = updated_at;
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }
