@@ -17,14 +17,19 @@ public class ItemPrice {
 	@Column(name = "id")
 	@SequenceGenerator(name = "item_price_id_seq", sequenceName = "account_id_seq", allocationSize = 1)
 	private Long id;
+
 	@Column(name="item_id")
 	private Long itemId;
+
 	@Column(name="price")
 	private Long price;
+
 	@Column(name="include_tax")
 	private Long includeTax;
+
 	@Column(name="created_at")
 	private java.sql.Timestamp createdAt;
+
 	@Column(name="updated_at")
 	private java.sql.Timestamp updatedAt;
 }

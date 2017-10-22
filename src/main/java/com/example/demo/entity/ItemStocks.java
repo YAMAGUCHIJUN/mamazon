@@ -17,15 +17,19 @@ public class ItemStocks {
 	@Column(name = "item_id")
 	@SequenceGenerator(name = "item_stocks_id_seq", sequenceName = "account_id_seq", allocationSize = 1)
 	private Long itemId;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "stockbase_id")
 	@SequenceGenerator(name = "item_stockbase_id_seq", sequenceName = "account_id_seq", allocationSize = 1)
 	private Long stockbaseId;
+
 	@Column(name="stock_count")
 	private Long stockCount;
+
 	@Column(name="created_at")
 	private java.sql.Timestamp createdAt;
+
 	@Column(name="updated_at")
 	private java.sql.Timestamp updatedAt;
 }
