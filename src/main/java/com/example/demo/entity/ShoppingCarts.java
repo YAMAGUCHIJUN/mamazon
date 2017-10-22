@@ -1,67 +1,42 @@
-package com.my.db;
+package com.example.demo.entity;
 
+import lombok.Data;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="shopping_carts")
+@Data
 public class ShoppingCarts {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name="id")
+  @SequenceGenerator(name = "shopping_carts_id_seq", sequenceName = "shopping_carts_id_seq", allocationSize = 1)
   private Long id;
-  private Long account_id;
-  private Long item_id;
+
+  @Column(name="account_id")
+  private Long accountId;
+
+  @Column(name="item_id")
+  private Long itemId;
+
+  @Column(name="quentity")
   private Long quentity;
-  private Long sub_total;
+
+  @Column(name="sub_total")
+  private Long subTotal;
+
+  @Column(name="createdAt")
   private java.sql.Timestamp created_at;
+
+  @Column(name="updatedAt")
   private java.sql.Timestamp updated_at;
 
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public Long getAccount_id() {
-    return account_id;
-  }
-
-  public void setAccount_id(Long account_id) {
-    this.account_id = account_id;
-  }
-
-  public Long getItem_id() {
-    return item_id;
-  }
-
-  public void setItem_id(Long item_id) {
-    this.item_id = item_id;
-  }
-
-  public Long getQuentity() {
-    return quentity;
-  }
-
-  public void setQuentity(Long quentity) {
-    this.quentity = quentity;
-  }
-
-  public Long getSub_total() {
-    return sub_total;
-  }
-
-  public void setSub_total(Long sub_total) {
-    this.sub_total = sub_total;
-  }
-
-  public java.sql.Timestamp getCreated_at() {
-    return created_at;
-  }
-
-  public void setCreated_at(java.sql.Timestamp created_at) {
-    this.created_at = created_at;
-  }
-
-  public java.sql.Timestamp getUpdated_at() {
-    return updated_at;
-  }
-
-  public void setUpdated_at(java.sql.Timestamp updated_at) {
-    this.updated_at = updated_at;
-  }
 }
