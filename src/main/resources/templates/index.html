@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="a.css" media="all" />
 </head>
 <body>
 umetsu keita<br/>
@@ -10,5 +11,19 @@ umetsu keita<br/>
     ↓工藤さんの名前<br/>
     <span th:text="${name}">kudou</span>
 </p>
+
+<div id="form">
+    <h1 class="form-title">サインイン</h1>
+    <form action="post">
+        <p>Eメールまたは携帯電話番号</p>
+        <p class="username"><input type="text" name="username" maxlength="32" autocomplete="ON" /></p>
+        <p>パスワード</p>
+        <a href="forgotpassword.html">パスワードを忘れた場合</a>
+        <p class="password"><input type="password" name="password" maxlength="32" autocomplete="OFF" /></p>
+        <p class="submit"><input type="submit" value="サインイン" /></p>
+        <p class="check"><input type="checkbox" name="checkbox" />サインインしたままにする</p>
+    </form>
+</div>
+
 </body>
 </html>
