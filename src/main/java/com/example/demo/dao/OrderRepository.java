@@ -1,11 +1,10 @@
 package com.example.demo.dao;
 
+import com.example.demo.entity.Orders;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.entity.Account;
-
 @Repository
-public interface AccountRepository extends JpaRepository<Account, Long> {
+public interface OrderRepository extends JpaRepository<Orders, Long> {
 
 }
