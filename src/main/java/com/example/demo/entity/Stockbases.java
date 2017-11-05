@@ -2,15 +2,16 @@ package com.example.demo.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="stock_bases")
 @Data
 public class Stockbases {
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @SequenceGenerator(name = "stock_bases_id_seq", sequenceName = "stock_bases_id_seq", allocationSize = 1)
   @Column(name="id")
   private Long id;
 
