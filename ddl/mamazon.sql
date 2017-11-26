@@ -121,7 +121,7 @@ CREATE TABLE shopping_carts
 
 CREATE TABLE stockbases
 (
-	id bigint NOT NULL,
+	id bigserial NOT NULL,
 	name text NOT NULL,
 	created_at timestamp,
 	updated_at timestamp,
