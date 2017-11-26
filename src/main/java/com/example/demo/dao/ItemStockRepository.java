@@ -4,8 +4,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.entity.ItemStock;
+import com.example.demo.entity.ItemStockKeyId;
 
 @Repository
-public interface ItemStockRepository extends JpaRepository<ItemStock, Long>{
+public interface ItemStockRepository extends JpaRepository<ItemStock, ItemStockKeyId>{
 
 }
