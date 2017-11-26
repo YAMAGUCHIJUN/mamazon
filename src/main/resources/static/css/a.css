@@ -10,6 +10,79 @@
 * Copyright 2011-2017 Twitter, Inc.
 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 */
+
+#dropmenu{
+list-style-type: none;
+width: auto;
+height: auto;
+margin: auto;
+padding: 0;
+background: #cccccc;
+}
+#dropmenu li{
+position: relative;
+float: left;
+margin: 0;
+padding: 0;
+text-align: center;
+}
+#dropmenu li a{
+display: block;
+margin: 0;
+padding: 15px 0 11px;
+color: #ffffff;
+font-size: 14px;
+font-weight: bold;
+line-height: 1;
+text-decoration: none;
+}
+
+#dropmenu li ul{
+list-style: none;
+position: absolute;
+top: 100%;
+left: 0;
+margin: 0;
+padding: 0;
+}
+
+#dropmenu li ul li{
+overflow: hidden;
+height: 0px;
+color: #ffffff;
+-moz-transition: .2s;
+-webkit-transition: .2s;
+-o-transition: .2s;
+-ms-transition: .2s;
+transition: .2s;
+}
+#dropmenu li ul li a{
+padding: 13px 15px;
+background: #ffffff;
+color: #000000;
+text-align: left;
+font-size: 12px;
+font-weight: normal;
+}
+#dropmenu li:hover > a{
+background: #ffffff;
+color: #FFCC33;
+font-size: 14px;
+}
+
+#dropmenu li:hover ul li{
+overflow: visible;
+height: 38px;
+border-top: 1px solid #7c8c0e;
+border-bottom: 1px solid #616d0b;
+}
+#dropmenu li:hover ul li:first-child{
+border-top: 0;
+}
+#dropmenu li:hover ul li:last-child{
+border-bottom: 0;
+}
+
 .alert {
   padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
@@ -2901,7 +2974,7 @@ button.list-group-item-dark {
       bottom: -11px;
       margin-left: -6px;
       border-top-color: rgba(0, 0, 0, 0.25); }
-    
+
     .popover.bs-popover-top .arrow::after, .popover.bs-popover-auto[x-placement^="top"] .arrow::after {
       bottom: -10px;
       margin-left: -6px;
@@ -2917,7 +2990,7 @@ button.list-group-item-dark {
     .popover.bs-popover-right .arrow::before, .popover.bs-popover-auto[x-placement^="right"] .arrow::before {
       left: -11px;
       border-right-color: rgba(0, 0, 0, 0.25); }
-    
+
     .popover.bs-popover-right .arrow::after, .popover.bs-popover-auto[x-placement^="right"] .arrow::after {
       left: -10px;
       border-right-color: #fff; }
@@ -2932,7 +3005,7 @@ button.list-group-item-dark {
     .popover.bs-popover-bottom .arrow::before, .popover.bs-popover-auto[x-placement^="bottom"] .arrow::before {
       top: -11px;
       border-bottom-color: rgba(0, 0, 0, 0.25); }
-    
+
     .popover.bs-popover-bottom .arrow::after, .popover.bs-popover-auto[x-placement^="bottom"] .arrow::after {
       top: -10px;
       border-bottom-color: #fff; }
@@ -2956,7 +3029,7 @@ button.list-group-item-dark {
     .popover.bs-popover-left .arrow::before, .popover.bs-popover-auto[x-placement^="left"] .arrow::before {
       right: -11px;
       border-left-color: rgba(0, 0, 0, 0.25); }
-    
+
     .popover.bs-popover-left .arrow::after, .popover.bs-popover-auto[x-placement^="left"] .arrow::after {
       right: -10px;
       border-left-color: #fff; }
