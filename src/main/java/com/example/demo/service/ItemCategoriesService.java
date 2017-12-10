@@ -23,6 +23,6 @@ public class ItemCategoriesService {
     
     public List<ItemCategories> findTopCategories(){
     	
-		return null;
+		return repository.findTopCategories();
     }
 }

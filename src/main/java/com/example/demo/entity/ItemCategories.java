@@ -33,9 +33,9 @@ public class ItemCategories {
   @Column(name="created_at")
   private java.sql.Timestamp createdAt;
 
-  @Column(name="update_at")
+  @Column(name="updated_at")
   private java.sql.Timestamp updatedAt;
 
-  @Column(name="is_deleted")
+  @Column(name="id_deleted")
   private String idDeleted;
 }
