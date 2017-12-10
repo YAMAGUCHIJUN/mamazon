@@ -30,12 +30,7 @@
       <ul class="collapse navbar-collapse" id="dropmenu">
         <li class="navbar-brand"><a href="#">メニュー</a>
           <ul>
-            <li ><a href="#">サブメニュー1</a></li>
-            <li ><a href="#">サブメニュー2</a></li>
-            <li ><a href="#">サブメニュー3</a></li>
-            <li ><a href="#">サブメニュー4</a></li>
-            <li ><a href="#">サブメニュー5</a></li>
-            <li ><a href="#">サブメニュー6</a></li>
+          	<li th:each="category : ${categoryList}"><a href="#" th:text="${category.name}">サブメニュー1</a></li>
           </ul>
         </li>
       </ul>
