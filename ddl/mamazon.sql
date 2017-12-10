@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS order_details;
 DROP TABLE IF EXISTS orders;
 DROP TABLE IF EXISTS shopping_carts;
 DROP TABLE IF EXISTS accounts;
+DROP TABLE IF EXISTS item_images;
 DROP TABLE IF EXISTS item_price;
 DROP TABLE IF EXISTS item_stocks;
 DROP TABLE IF EXISTS items;
@@ -34,8 +35,9 @@ CREATE TABLE accounts
 CREATE TABLE items
 (
 	id bigserial NOT NULL,
-	name text NOT NULL,
 	category_id bigint NOT NULL,
+	name text NOT NULL,
+	description text,
 	sale_start timestamp,
 	sale_end timestamp,
 	created_at timestamp,
@@ -55,6 +57,17 @@ CREATE TABLE item_categories
 	updated_at timestamp,
 	id_deleted boolean NOT NULL,
 	PRIMARY KEY (id)
+) WITHOUT OIDS;
+
+
+CREATE TABLE item_images
+(
+	id bigint NOT NULL,
+	image_order bigint NOT NULL,
+	id_deleted boolean NOT NULL,
+	created_at timestamp,
+	updated_at timestamp with time zone,
+	PRIMARY KEY (id, image_order)
 ) WITHOUT OIDS;
 
 
@@ -108,7 +121,7 @@ CREATE TABLE order_details
 
 CREATE TABLE shopping_carts
 (
-	id bigserial NOT NULL,
+	id bigint NOT NULL,
 	account_id bigint NOT NULL,
 	item_id bigint NOT NULL,
 	quentity bigint NOT NULL,
@@ -143,6 +156,14 @@ ALTER TABLE orders
 ALTER TABLE shopping_carts
 	ADD FOREIGN KEY (account_id)
 	REFERENCES accounts (id)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+;
+
+
+ALTER TABLE item_images
+	ADD FOREIGN KEY (id)
+	REFERENCES items (id)
 	ON UPDATE RESTRICT
 	ON DELETE RESTRICT
 ;
@@ -208,6 +229,4 @@ ALTER TABLE item_stocks
 /* Comments */
 
 COMMENT ON COLUMN orders.sub_total IS '送料とかを含めないやつ';
-
-
 
