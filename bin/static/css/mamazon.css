@@ -33,7 +33,7 @@
 
 #dropmenu {
   list-style-type: none;
-  width: auto;
+  width: 100%;
   height: auto;
   margin: auto;
   padding: 0;
@@ -108,6 +108,23 @@
 #dropmenu li:hover ul li:last-child {
   border-bottom: 0;
 }
+
+
+/* コンテナ */
+.container {
+  width: 100%;
+margin-right: auto;
+margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+.left {
+    width: 100px;
+    margin-right: auto;
+}
+
 
 .btn {
   position: relative;
@@ -338,14 +355,6 @@ select.form-control:focus::-ms-value {
   .form-inline .has-feedback .form-control-feedback {
     top: 0;
   }
-}
-
-.container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 @media (min-width: 576px) {

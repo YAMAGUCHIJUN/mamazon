@@ -33,7 +33,7 @@
 
 #dropmenu {
   list-style-type: none;
-  width: auto;
+  width: 100%;
   height: auto;
   margin: auto;
   padding: 0;
@@ -68,8 +68,18 @@
   padding: 0;
 }
 
+/*孫*/
+#dropmenu li ul li ul {
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 #dropmenu li ul li {
-  overflow: hidden;
+  display: none;
   height: 0px;
   color: #ffffff;
   -moz-transition: .2s;
@@ -88,6 +98,28 @@
   font-weight: normal;
 }
 
+/*孫*/
+#dropmenu li ul li ul li {
+  display: none;
+  height: 0px;
+  color: #ffffff;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  transition: .2s;
+}
+
+/*孫*/
+#dropmenu li ul li ul li a {
+  padding: 13px 15px;
+  background: #ffffff;
+  color: #000000;
+  text-align: left;
+  font-size: 12px;
+  font-weight: normal;
+}
+
 #dropmenu li:hover>a {
   background: #ffffff;
   color: #FFCC33;
@@ -95,18 +127,44 @@
 }
 
 #dropmenu li:hover ul li {
-  overflow: visible;
+  display: block;
   height: 38px;
   border-top: 1px solid #7c8c0e;
   border-bottom: 1px solid #616d0b;
 }
 
-#dropmenu li:hover ul li:first-child {
+#dropmenu li:hover ul li ul li{
+  display: none;
+}
+
+#dropmenu li ul li:hover ul li {
+  display: block;
+  height: 38px;
+  border-top: 1px solid #7c8c0e;
+  border-bottom: 1px solid #616d0b;
+}
+
+/* #dropmenu li:hover ul li:first-child {
   border-top: 0;
 }
 
 #dropmenu li:hover ul li:last-child {
   border-bottom: 0;
+} */
+
+/* コンテナ */
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.left {
+  width: 100px;
+  margin-right: auto;
 }
 
 .btn {
@@ -338,14 +396,6 @@ select.form-control:focus::-ms-value {
   .form-inline .has-feedback .form-control-feedback {
     top: 0;
   }
-}
-
-.container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 @media (min-width: 576px) {
