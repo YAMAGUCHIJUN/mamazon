@@ -2,9 +2,9 @@
 <html>
 
 <head>
-    <meta charset="UTF-8"/>
-    <title>Mamazon | 木, ファッツョソ, 易竜から令品まで | ママゾン</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/mamazon.css" th:href="@{/css/mamazon.css}" media="all" />
+  <meta charset="UTF-8" />
+  <title>Mamazon | 木, ファッツョソ, 易竜から令品まで | ママゾン</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/mamazon.css" th:href="@{/css/mamazon.css}" media="all" />
 </head>
 
 <body>
@@ -28,34 +28,42 @@
 
   <nav class="navbar navbar-expand-md bg-secondary navbar-dark">
     <div class="container">
-      <ul class="collapse navbar-collapse" id="dropmenu">
-        <li class="navbar-brand"><a href="#">メニュー</a>
+      <ul id="dropmenu">
+        <li class="left navbar-brand"><a href="#">メニュー</a>
           <ul>
-            <li ><a href="#">サブメニュー1</a></li>
-            <li ><a href="#">サブメニュー2</a></li>
-            <li ><a href="#">サブメニュー3</a></li>
-            <li ><a href="#">サブメニュー4</a></li>
-            <li ><a href="#">サブメニュー5</a></li>
-            <li ><a href="#">サブメニュー6</a></li>
+            <li><a href="#">サブメニュー1</a>
+              <ul>
+                <li><a href="#">孫メニュー11</a></li>
+                <li><a href="#">孫メニュー12</a></li>
+                <li><a href="#">孫メニュー13</a></li>
+              </ul>
+            </li>
+            <li><a href="#">サブメニュー2</a></li>
+            <li><a href="#">サブメニュー3</a>
+              <ul>
+                <li><a href="#">孫メニュー31</a></li>
+                <li><a href="#">孫メニュー32</a></li>
+                <li><a href="#">孫メニュー33</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
     </div>
   </nav>
 
+  <div id="contents">
+    <div id="left">
+      <img src="/mamazon/item_image/singeki1-1.jpg" alt="image">
+    </div>
 
-	<div id="left">
-		<div id="product_image"></div>
+    <div id="center">
 
-	</div>
+    </div>
 
-	<div id="center">
-		<div id="product_title"></div>
-
-	</div>
-
-	<div id="right">
-		<select name="quantity">
+    <div id="right">
+      <label for="quantity">数量:</label>
+      <select name="quantity">
 			<option value="1">1</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -66,46 +74,40 @@
 			<option value="8">8</option>
 			<option value="9">9</option>
 			<option value="10">10</option>
-		</select> <input type="submit" name="add_to_cart" value="カートに入れる" />
+		</select>
+      <br>
+      <input type="submit" class="btn btn-primary" name="add_to_cart" value="カートに入れる"/>
+    </div>
+  </div>
 
-	<p>十分なスペースが有れば、サブメニューは壊れないようだ</p>
-	<p>十分なスペースが有れば、サブメニューは壊れないようだ</p>
-	<p>十分なスペースが有れば、サブメニューは壊れないようだ</p>
-	<p>十分なスペースが有れば、サブメニューは壊れないようだ</p>
-	<p>十分なスペースが有れば、サブメニューは壊れないようだ</p>
-	<p>十分なスペースが有れば、サブメニューは壊れないようだ</p>
-	<p>十分なスペースが有れば、サブメニューは壊れないようだ</p>
-	<p>十分なスペースが有れば、サブメニューは壊れないようだ</p>
-	</div>
-
-
-<footer>
-  <div class="bg-dark text-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-4 text-center">
-              <p>
-                <a href="terms_of_service" class="text-white">利用規約</a>
-              </p>
-            </div>
-            <div class="col-md-4 text-center">
-              <a href="privacy" class="text-white">プライバシー規約</a>
-            </div>
-            <div class="col-md-4 text-center">
-              <a href="help" class="text-white">ヘルプ</a>
+  <footer>
+    <div class="bg-dark text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-4 text-center">
+                <p>
+                  <a href="terms_of_service" class="text-white">利用規約</a>
+                </p>
+              </div>
+              <div class="col-md-4 text-center">
+                <a href="privacy" class="text-white">プライバシー規約</a>
+              </div>
+              <div class="col-md-4 text-center">
+                <a href="help" class="text-white">ヘルプ</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 mt-3">
-          <p class="text-center text-white">© 2017, MamazonProject</p>
+        <div class="row">
+          <div class="col-md-12 mt-3">
+            <p class="text-center text-white">© 2017, MamazonProject</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 </body>
+
 </html>

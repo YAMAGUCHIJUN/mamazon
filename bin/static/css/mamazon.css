@@ -1,29 +1,3 @@
-#form {
-  width: 350px;
-  margin: 30px auto;
-  padding: 20px;
-  border: 1px solid #555;
-}
-
-#container {
-  width: 100%;
-  position: relative;
-  height: auto !important;
-  height: 100%;
-  min-height: 100%;
-}
-
-#contents {
-  padding-bottom: 100px;
-}
-
-#footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-}
-
 /*!
 * Bootstrap 4.0.0-beta (https://getbootstrap.com)
 * Copyright 2011-2017 The Bootstrap Authors
@@ -31,82 +5,19 @@
 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 */
 
-#dropmenu {
-  list-style-type: none;
-  width: auto;
-  height: auto;
-  margin: auto;
-  padding: 0;
-  background: #cccccc;
+/* コンテナ */
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
-#dropmenu li {
-  position: relative;
-  float: left;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-#dropmenu li a {
-  display: block;
-  margin: 0;
-  padding: 15px 0 11px;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1;
-  text-decoration: none;
-}
-
-#dropmenu li ul {
-  list-style: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  margin: 0;
-  padding: 0;
-}
-
-#dropmenu li ul li {
-  overflow: hidden;
-  height: 0px;
-  color: #ffffff;
-  -moz-transition: .2s;
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  -ms-transition: .2s;
-  transition: .2s;
-}
-
-#dropmenu li ul li a {
-  padding: 13px 15px;
-  background: #ffffff;
-  color: #000000;
-  text-align: left;
-  font-size: 12px;
-  font-weight: normal;
-}
-
-#dropmenu li:hover>a {
-  background: #ffffff;
-  color: #FFCC33;
-  font-size: 14px;
-}
-
-#dropmenu li:hover ul li {
-  overflow: visible;
-  height: 38px;
-  border-top: 1px solid #7c8c0e;
-  border-bottom: 1px solid #616d0b;
-}
-
-#dropmenu li:hover ul li:first-child {
-  border-top: 0;
-}
-
-#dropmenu li:hover ul li:last-child {
-  border-bottom: 0;
+.left {
+  width: 100px;
+  margin-right: auto;
 }
 
 .btn {
@@ -338,14 +249,6 @@ select.form-control:focus::-ms-value {
   .form-inline .has-feedback .form-control-feedback {
     top: 0;
   }
-}
-
-.container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 @media (min-width: 576px) {
@@ -1670,4 +1573,163 @@ a.bg-dark:focus, a.bg-dark:hover {
 
 body>* {
   background-size: cover;
+}
+
+#form {
+  width: 350px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #555;
+}
+
+#container {
+  width: 100%;
+  position: relative;
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+}
+
+#contents {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff !important;
+}
+
+#left {
+  float: left;
+  background-color: #ffffff !important;
+}
+
+#center {
+  float: left;
+  background-color: #ffffff !important;
+}
+
+#right {
+  float: right;
+  background-color: #ffffff !important;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+
+#dropmenu {
+  list-style-type: none;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 0;
+  background: #cccccc;
+}
+
+#dropmenu li {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#dropmenu li a {
+  display: block;
+  margin: 0;
+  padding: 15px 0 11px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+}
+
+#dropmenu li ul {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*孫*/
+
+#dropmenu li ul li ul {
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#dropmenu li ul li {
+  display: none;
+  height: 0px;
+  color: #ffffff;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  transition: .2s;
+}
+
+#dropmenu li ul li a {
+  padding: 13px 15px;
+  background: #ffffff;
+  color: #000000;
+  text-align: left;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/*孫*/
+
+#dropmenu li ul li ul li {
+  display: none;
+  height: 0px;
+  color: #ffffff;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  transition: .2s;
+}
+
+/*孫*/
+
+#dropmenu li ul li ul li a {
+  padding: 13px 15px;
+  background: #ffffff;
+  color: #000000;
+  text-align: left;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+#dropmenu li:hover>a {
+  background: #ffffff;
+  color: #FFCC33;
+  font-size: 14px;
+}
+
+#dropmenu li:hover ul li {
+  display: block;
+  height: 38px;
+  border-top: 1px solid #7c8c0e;
+  border-bottom: 1px solid #616d0b;
+}
+
+#dropmenu li:hover ul li ul li {
+  display: none;
+}
+
+#dropmenu li ul li:hover ul li {
+  display: block;
+  height: 38px;
+  border-top: 1px solid #7c8c0e;
+  border-bottom: 1px solid #616d0b;
 }
