@@ -7,6 +7,7 @@ DROP TABLE IF EXISTS shopping_carts;
 DROP TABLE IF EXISTS accounts;
 DROP TABLE IF EXISTS item_images;
 DROP TABLE IF EXISTS item_price;
+DROP TABLE IF EXISTS item_spec;
 DROP TABLE IF EXISTS item_stocks;
 DROP TABLE IF EXISTS items;
 DROP TABLE IF EXISTS item_categories;
@@ -80,6 +81,19 @@ CREATE TABLE item_price
 	created_at timestamp,
 	updated_at timestamp,
 	PRIMARY KEY (id)
+) WITHOUT OIDS;
+
+
+CREATE TABLE item_spec
+(
+	item_id bigint NOT NULL,
+	spec_column_id bigint,
+	spec_column_name text,
+	spec_column_value text NOT NULL,
+	spec_column_order bigint,
+	created_at timestamp,
+	updated_at timestamp,
+	PRIMARY KEY (item_id)
 ) WITHOUT OIDS;
 
 
@@ -177,6 +191,14 @@ ALTER TABLE item_price
 ;
 
 
+ALTER TABLE item_spec
+	ADD FOREIGN KEY (item_id)
+	REFERENCES items (id)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+;
+
+
 ALTER TABLE item_stocks
 	ADD FOREIGN KEY (item_id)
 	REFERENCES items (id)
@@ -229,4 +251,6 @@ ALTER TABLE item_stocks
 /* Comments */
 
 COMMENT ON COLUMN orders.sub_total IS '送料とかを含めないやつ';
+
+
 
