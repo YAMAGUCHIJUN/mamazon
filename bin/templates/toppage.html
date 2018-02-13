@@ -25,25 +25,44 @@
       </div>
     </div>
   </nav>
-  <nav class="navbar navbar-expand-md bg-secondary navbar-dark">
-    <div class="container">
-      <ul class="collapse navbar-collapse" id="dropmenu">
-        <li class="navbar-brand"><a href="#">メニュー</a>
-          <ul>
-          	<li th:each="category : ${categoryList}"><a href="#" th:text="${category.name}">サブメニュー1</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="py-5">
+	<nav class="navbar navbar-expand-md bg-secondary navbar-dark">
+		<div class="container">
+			<ul id="dropmenu">
+				<li class="left navbar-brand"><a href="#">メニュー</a>
+					<ul>
+						<li th:each="category : ${categoryList}"><a href="#" th:text="${category.name}">サブメニュー1</a>
+							<ul>
+								<li th:each="category : ${categoryList}"><a href="#" th:text="${category.name}">孫メニュー1</a></li>
+								<li th:each="category : ${categoryList}"><a href="#" th:text="${category.name}">孫メニュー2</a></li>
+								<li th:each="category : ${categoryList}"><a href="#" th:text="${category.name}">孫メニュー3</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <p>コンテンツLeft</p>
+          <p>Left</p>
         </div>
 
         <div class="col-md-4">
+          <p>コンテンツCenter</p>
+          <p>コンテンツCenter</p>
+          <p>コンテンツCenter</p>
+          <p>コンテンツCenter</p>
+          <p>コンテンツCenter</p>
+          <p>コンテンツCenter</p>
+          <p>コンテンツCenter</p>
+          <p>コンテンツCenter</p>
+          <p>コンテンツCenter</p>
+          <p>コンテンツCenter</p>
+          <p>コンテンツCenter</p>
+          <p>コンテンツCenter</p>
+          <p>コンテンツCenter</p>
           <p>コンテンツCenter</p>
         </div>
 
